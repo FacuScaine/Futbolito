@@ -1,0 +1,14 @@
+.range {
+    width: 99%;
+    -webkit-appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+    appearance: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 11px 8px rgba(0, 0, 0, 0.571);
+    background: url(../imagenes/pelota.png);
+    background-size: 100%;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../imagenes/pelota.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Partido</title>
+</head>
+
+<body id="grid">
+    <div class="inicio">
+        <button class="boton" id="inicio" onclick="partido()">Empezar Partido</button>
+    </div>
+        
+        <div class="tablero">
+            <p class="timer" id="timer">0'</p>
+            <p class="contador"><b id="eq1">0</b> - <b id="eq2">0</b></p>
+        </div>
+
+        <div class="selects">
+            <button class="boton" id="inicio" onclick="selectEq1()">Select Equipo 1</button>
+            <button class="boton" id="inicio" onclick="selectEq2()">Select Equipo 2</button>
+        </div>
+        
+    <div class="equipos">
+        <div class="equipoo">
+            <img src="" alt="" id="img1" />
+            <p id="nombre"></p>
+        </div>
+
+        <div class="equipoo">
+            <img src="" alt="" id="img2" />
+            <p id="nombre2"></p>
+        </div>
+    </div>
+    <div class="ranger">
+        <input id="range" class="range" type="range" disabled>
+    </div>
+
+    <div class="juego" id="choices">
+        <input id="juego" type="image" src="../imagenes/Rock.png" value="piedra">
+        <input id="juego" type="image" src="../imagenes/Paper.png" value="papel">
+        <input id="juego" type="image" src="../imagenes/Siccsors.png" value="tijera">
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./partido.js"></script>
+</body>
+
+</html>

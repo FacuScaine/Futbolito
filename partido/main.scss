@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Anton", sans-serif;
+}
+
+body {
+    background-image: url('../imagenes/FondoNuevo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+#grid {
+    display: grid;
+    grid-template-areas:
+        "inicio tablero selects"
+        "equipos equipos equipos"
+        "ranger ranger ranger"
+        "juego juego juego";
+}
+
+.inicio {
+    grid-area: inicio;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tablero {
+    grid-area: tablero;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
+.selects {
+    grid-area: selects;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around
+}
+
+.equipos {
+    grid-area: equipos;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ranger {
+    grid-area: ranger;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.juego {
+    grid-area: juego;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    input {
+        max-width: 9%;
+    }
+
+    input:hover {
+        transform: scale(1.3, 1.3);
+        transition: all 0.3s;
+    }
+}
+
+@import 'range';
+
+.equipoo {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.boton {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 30px;
+}
