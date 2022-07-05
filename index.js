@@ -1,4 +1,7 @@
 let resultado = localStorage.getItem("Historial")
+const ambiente = new Audio('ambiente.mp3');
+ambiente.play()
+
 
 function historial (){
   Swal.fire(

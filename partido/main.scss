@@ -24,24 +24,30 @@ body {
     margin: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .tablero {
+    color: white;
     grid-area: tablero;
     margin: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-size: 30px;
+    border: 3px solid rgb(13, 0, 255);
+    border-radius: 10px;
 }
 
 .selects {
     grid-area: selects;
     margin: 10px;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    align-items: center;    
 }
 
 .equipos {
+    color: white;
     grid-area: equipos;
     display: flex;
     justify-content: space-around;
@@ -79,8 +85,16 @@ body {
 }
 
 .boton {
-    background-color: red;
-    border: 2px solid black;
+    color: white;
+    padding: 3px;
+    background-color: transparent;
+    border: 2px solid rgb(13, 0, 255);
     border-radius: 10px;
     height: 30px;
+}
+
+.boton:hover {
+    color: black;
+    transform: scale(1.4, 1.4);
+    transition: all 0.3s;
 }

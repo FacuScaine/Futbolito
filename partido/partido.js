@@ -14,6 +14,11 @@ const choicesDisplay = document.querySelector('#choices');
 
 var indice = 0
 
+const silbato = new Audio('silbato.mp3');
+const silbatoFP = new Audio('silbatoFP.mp3')
+const silbatoFinal = new Audio('silbatoFinal.mp3');
+const hinchada = new Audio('hinchada.mp3');
+const golS = new Audio('gol.mp3');
 
 //Api Equipos
 function equipo1(logo, nombreEquipo) {
@@ -57,6 +62,7 @@ function gol() {
             y: 540
         },
     }).showToast();
+    golS.play()
 }
 
 function golEnContra() {
@@ -69,6 +75,7 @@ function golEnContra() {
             y: 540
         },
     }).showToast();
+    golS.play()
 }
 
 function selectMachine(choose) {
@@ -168,7 +175,11 @@ function final() {
 
 // Partido
 
+Swal.fire('Recuerda que puedes seleccionar los equipos para el partido mediante los botones Select equipo 1/2')
+
 function partido() {
+    hinchada.play()
+    silbato.play()
     inicio.setAttribute("disabled", "")
     let posicion = 50;
     range.value = 50;
@@ -182,10 +193,12 @@ function partido() {
         timer.innerHTML = parseInt(timer.innerText) + 1 + "'";
         if (timer.innerText == "45'") {
             inicio.removeAttribute("disabled")
+            silbatoFP.play()
             clearInterval(tiempo)
             entreTiempo()
         } else if (timer.innerText == "90'") {
             clearInterval(tiempo)
+            silbatoFinal.play()
             final()
         }
     }, 600)
